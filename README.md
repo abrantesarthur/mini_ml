@@ -1,12 +1,20 @@
 
-##project
------
-Before you start working, add the extra remote repository for project. To do so, run:
+Mini ML
+============
 
-`git remote add distribution git@github.com:cs51/project.git`
+This is Mini ML, a small, turing-complete, functional programming language built for Harvard's [CS51]
 
-To check for updates, run:
+Instructions
+------------
 
-`git pull distribution master`
+1. Install OCamlbuild
+2.
+3.
 
-You should run this periodically to check for updates.
+Make Targets
+------------
+
+
+
+
+[CS51]: https://cs51.io/
