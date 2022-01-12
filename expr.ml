@@ -51,7 +51,7 @@ let vars_of_list = SS.of_list ;;
   
 (* Return a set of the variable names free in [exp] *)
 let rec free_vars (exp : expr) : varidset =
-  match exp wit
+  match exp with
   | Var v -> SS.singleton v
   | Num _ | Bool _ | Raise | Unassigned -> SS.empty
   | Unop (u, exp1) -> free_vars exp1 
@@ -64,7 +64,7 @@ let rec free_vars (exp : expr) : varidset =
   | Letrec (v, exp1, exp2) -> 
       SS.union (SS.remove v (free_vars exp2)) (free_vars exp1)
   | App (exp1, exp2) ->
-      SS.union (free_vars exp1) (free_vars exp2) ;; *)
+      SS.union (free_vars exp1) (free_vars exp2) ;;
 
 
 let n = ref 0 ;;
